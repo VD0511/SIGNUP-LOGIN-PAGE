@@ -1,0 +1,168 @@
+.contener{
+          height: auto;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          position: relative;
+          perspective: 1500px;
+}
+#box1{
+      background: #ffe6e6;
+      height: 500px;
+      width: 400px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      border-radius: 24px;
+      position: absolute;
+      transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+      transform-style: preserve-3d;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      backdrop-filter:blur(10px);
+      border: 2px solid #ff0040 ;     /* Andar ki border */
+      
+     
+}
+#box2{
+      background:#ffe6e6;
+      height: 500px;
+      width: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 30px;
+      border-radius: 24px;
+      position: absolute;
+      transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+      transform-style: preserve-3d;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      backdrop-filter:blur(10px);
+      border: 2px solid #ff0040 ;     /* Andar ki border */
+      
+     }
+       
+input{
+      width:100%;
+      max-width: 300px;
+      padding: 12px 25px;
+      height: 30px;
+      border-radius:12px;
+      border: 1.5px solid #e2e8f0;
+      outline: none;
+      font-size: 14px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      background: #f8fafc;
+}
+input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+    transform: translateY(-2px);
+}
+input:hover{
+          transform: scale(1.1);
+};
+
+
+
+button{
+      background: linear-gradient(to right, #667eea, #764ba2);
+      color: white;
+      border: none;
+      padding:12px 40px;
+      border-radius: 12px;
+      font-weight: 600;
+      cursor:pointer;
+      letter-spacing: 0.5px;
+      box-shadow: 0 10px 15px -3px rgba(118, 75, 162, 0.3);
+      
+}
+.login-active #box1 { z-index: 5; transform:scale(1); opacity: 1; pointer-events: all; }
+.login-active #box2 { z-index: 1;; transform: translate(40px, 40px)rotate(5deg); opacity: 0.5; filter: blur(2px); pointer-events: none; }
+
+.signup-active #box2 { z-index: 5; transform:scale(1); opacity: 1; pointer-events: all; }
+.signup-active #box1 { z-index: 1; transform: translate(40px, 40px)rotate(5deg); opacity: 0.5; filter: blur(2px); pointer-events: none; }
+button{
+       transition:0.3s;
+}
+button:hover{
+         transform: translateY(-3px);
+    box-shadow: 0 20px 25px -5px rgba(118, 75, 162, 0.4);
+    filter: brightness(1.1);
+}
+/* Container ki position */
+.input-group {
+    position: relative;
+    margin-bottom: 25px; /* Do inputs ke beech gap */
+}
+
+/* Label ko input ke andar dikhana */
+.input-group label {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-100%);
+    background: transparent; /* Shuru mein transparent */
+    color: gray;
+    pointer-events: none;
+    transition: all 0.3s ease; /* Ye udne wala animation dega */
+}
+
+/* Jab input par click ho ya usme text ho */
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+    top: 0; /* Upar ud gaya */
+    font-size: 20px;
+    color:rgb(60, 60, 60);
+    ;
+     /* Upar jaakar border ke upar dikhega */
+    padding: 0 5px;
+}
+@media (max-width:768px) {
+      .contener{
+            flex-direction: column;
+            padding: 20px;
+      }
+      #box1,#box2{
+            position: relative;
+            width: 90%;
+            height: auto;
+      }};
+#logbox{
+      height: 100px;
+      width: 100px;
+      background-color:yellow;
+
+}      
+.switch-text {
+    font-size: 14px;
+    color: #666; /* Subtle grey color */
+    margin-top: 15px;
+    cursor: default;
+}
+
+.switch-text span {
+    color: #4A90E2; /* Professional blue link color */
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.switch-text span:hover {
+    text-decoration: underline;
+    color: #357ABD; /* Darker blue on hover */
+}
+
+
+
+
+
+
+

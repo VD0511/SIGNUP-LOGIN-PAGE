@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup page</title>
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+     
+</head>
+<body>
+    <div class="contener login-active" id="mainWrapper">
+        <div id="box1" >
+            <h2>Login</h2>
+            <p style="color:gray; font-size:12px;">Enter your credentials</p>
+             <div class="input-group">
+                <input type="text" id="login-user" placeholder=" "required>
+                <label for="login-user"> user name</label>
+            </div>
+            <div class="input-group">
+                <input type="password" id="login-pass" placeholder=" "required> 
+                <label for="login-pass">password</label>
+            </div>
+             <button id="loginbutton"> Login</button>
+             <p class="switch-text">New here? <span onclick="toggleView('signup')">Create an account</span></p>
+
+        </div>
+        <div id="box2" >
+            <h2>Signup</h2>
+            <p style="color:gray; font-size:12px;">Enter your credentials</p>
+            <div class="input-group">
+                <input type="text" id="signup-user" placeholder=" "required>
+                <label for="signup-user">user name</label>
+            </div>
+            <div class="input-group">
+                <input type="password" id="signup-pass" placeholder=" "required> 
+                <label for="signup-pass">password</label>
+            </div>    
+             <button id="btn"> Signup</button>
+             <p class="switch-text">Already a member? <span onclick="toggleView('login')">Log in here</span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
